@@ -1,5 +1,6 @@
 # [qBittorrent](https://github.com/qbittorrent/qBittorrent), WireGuard and OpenVPN
-[![Docker Pulls](https://img.shields.io/docker/pulls/rporotti/docker-qbittorrentvpn/latest)](https://hub.docker.com/r/rporotti/docker-qbittorrentvpn)
+
+[![Docker Pulls](https://img.shields.io/docker/pulls/rporotti/docker-qbittorrentvpn)](https://hub.docker.com/r/rporotti/docker-qbittorrentvpn)
 [![Docker Image Size (tag)](https://img.shields.io/docker/image-size/rporotti/docker-qbittorrentvpn/latest)](https://hub.docker.com/r/rporotti/docker-qbittorrentvpn)
 [![Docker Build/Publish Image](https://github.com/rporotti/docker-qbittorrentvpn/actions/workflows/docker-image.yml/badge.svg)](https://github.com/rporotti/docker-qbittorrentvpn/actions/workflows/docker-image.yml)
 
