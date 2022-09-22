@@ -1,8 +1,12 @@
 # [qBittorrent](https://github.com/qbittorrent/qBittorrent), WireGuard and OpenVPN
-[![Docker Pulls](https://img.shields.io/docker/pulls/dyonr/qbittorrentvpn)](https://hub.docker.com/r/dyonr/qbittorrentvpn)
-[![Docker Image Size (tag)](https://img.shields.io/docker/image-size/dyonr/qbittorrentvpn/latest)](https://hub.docker.com/r/dyonr/qbittorrentvpn)
+[![Docker Image Size (tag)](https://img.shields.io/docker/pulls/rporotti/docker-qbittorrentvpn/latest)](https://hub.docker.com/r/rporotti/docker-qbittorrentvpn)
+[![Docker Image Size (tag)](https://img.shields.io/docker/image-size/rporotti/docker-qbittorrentvpn/latest)](https://hub.docker.com/r/rporotti/docker-qbittorrentvpn)
+[![Docker Build/Publish Image](https://github.com/rporotti/docker-qbittorrentvpn/actions/workflows/docker-image.yml/badge.svg)](https://github.com/rporotti/docker-qbittorrentvpn/actions/workflows/docker-image.yml)
 
 Docker container which runs the latest [qBittorrent](https://github.com/qbittorrent/qBittorrent)-nox client while connecting to WireGuard or OpenVPN with iptables killswitch to prevent IP leakage when the tunnel goes down.
+Based on the fork of [DyonR/docker-qbittorrentvpn](https://github.com/DyonR/docker-qbittorrentvpn), this repo is build for a aarch64 (ARM 64) architecture, and it was tested on a Raspberry Pi 4.
+This repo includes a port forwarding script that automatically updates the qBittorrent incoming port, by polling PIA every 15 minutes.
+
 
 [preview]: https://raw.githubusercontent.com/DyonR/docker-templates/master/Screenshots/qbittorrentvpn/qbittorrentvpn-webui.png "qBittorrent WebUI"
 ![alt text][preview]
