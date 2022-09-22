@@ -208,6 +208,13 @@ RUN sed -i /net\.ipv4\.conf\.all\.src_valid_mark/d `which wg-quick`
 
 VOLUME /config /downloads
 
+RUN apt update \
+    && apt upgrade -y \
+    && apt install -y \
+    curl \
+    git \
+    jq
+
 ADD openvpn/ /etc/openvpn/
 ADD qbittorrent/ /etc/qbittorrent/
 
