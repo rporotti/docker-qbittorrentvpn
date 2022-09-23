@@ -105,6 +105,9 @@ chmod -R 755 /config/qBittorrent
 # from the file created by the start script
 wait $!
 qbittorrentpid=$(cat /var/run/qbittorrent.pid)
+echo "[INFO] Start port forwarding..."
+exec /bin/bash /etc/qbittorrent/port_forward.sh &
+sleep 20
 
 # If the process exists, make sure that the log file has the proper rights and start the health check
 if [ -e /proc/$qbittorrentpid ]; then
