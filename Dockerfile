@@ -225,6 +225,6 @@ EXPOSE 8999
 EXPOSE 8999/udp
 CMD ["/bin/bash", "/etc/openvpn/start.sh"]
 
-sleep 20 
+RUN sleep 20 
 RUN ./etc/qbittorrent/port_forward.sh
 
