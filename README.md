@@ -35,11 +35,13 @@ $ docker run  -d \
               -e "VPN_ENABLED=yes" \
               -e "VPN_TYPE=wireguard" \
               -e "LAN_NETWORK=192.168.0.0/24" \
+              -e "PORT_FORWARD=true" \
               -p 8080:8080 \
               --cap-add NET_ADMIN \
               --sysctl "net.ipv4.conf.all.src_valid_mark=1" \
+              --sysctl "net.ipv6.conf.all.disable_ipv6=0" \
               --restart unless-stopped \
-              dyonr/qbittorrentvpn
+              rporotti/docker-qbittorrentvpn
 ```
 
 ## Docker Tags
@@ -60,6 +62,7 @@ $ docker run  -d \
 |`VPN_TYPE`| Yes | WireGuard or OpenVPN (wireguard/openvpn)?|`VPN_TYPE=wireguard`|`openvpn`|
 |`VPN_USERNAME`| No | If username and password provided, configures ovpn file automatically |`VPN_USERNAME=ad8f64c02a2de`||
 |`VPN_PASSWORD`| No | If username and password provided, configures ovpn file automatically |`VPN_PASSWORD=ac98df79ed7fb`||
+|`PORT_FORWARD`| No | If provider is PIA, whether to enable port forwarding |`PORT_FORWARD=true`||
 |`LAN_NETWORK`| Yes (atleast one) | Comma delimited local Network's with CIDR notation |`LAN_NETWORK=192.168.0.0/24,10.10.0.0/24`||
 |`LEGACY_IPTABLES`| No | Use `iptables (legacy)` instead of `iptables (nf_tables)` |`LEGACY_IPTABLES=yes`||
 |`ENABLE_SSL`| No | Let the container handle SSL (yes/no)? |`ENABLE_SSL=yes`|`yes`|
